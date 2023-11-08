@@ -1,0 +1,112 @@
+[PROJECT]
+Target=practica_3.hex
+Processor_Text=PIC18F4550
+CCSVersion=5.076
+Compiler=PCH
+[Target Data]
+FileList=practica_3.c
+[practica_3.c]
+Type=4
+[mru-list]
+1=practica_3.c
+
+[defines]
+buildcount=108
+
+[ProjectLog]
+Days=4
+D1=23-07-2023
+D1_L=4
+D1_L1=[33349]Stopped Editing.
+D1_L2=[39659]Started Editing.
+D1_L3=[39811]Stopped Editing.
+TotalEdit=187
+TotalDebug=0
+D1_E=4
+D1_D=0
+D1_L4=[39811]Project Closed.
+D2=25-07-2023
+D2_L=36
+D2_L1=[69358]Project Opened.
+D2_L2=[70484]Started Editing.
+D2_L3=[71382]Stopped Editing.
+D2_L4=[71994]Started Editing.
+D2_L5=[72337]Stopped Editing.
+D2_L6=[72343]Started Editing.
+D2_L7=[72790]Stopped Editing.
+D2_L8=[73660]Started Editing.
+D2_L9=[74267]Stopped Editing.
+D2_L10=[74832]Started Editing.
+D2_L11=[75209]Stopped Editing.
+D2_L12=[76541]Started Editing.
+D2_L13=[77343]Stopped Editing.
+D2_E=92
+D2_D=0
+D2_L14=[77343]Project Closed.
+D2_L15=[77357]Project Opened.
+D2_L16=[77433]Started Editing.
+D2_L17=[78098]Stopped Editing.
+D2_L18=[78153]Started Editing.
+D2_L19=[78958]Stopped Editing.
+D2_L20=[78992]Started Editing.
+D2_L21=[79202]Stopped Editing.
+D2_L22=[79202]Project Closed.
+D2_L23=[79225]Project Opened.
+D2_L24=[79334]Started Editing.
+D2_L25=[80225]Stopped Editing.
+D2_L26=[80587]Started Editing.
+D2_L27=[80964]Stopped Editing.
+D2_L28=[81835]Started Editing.
+D2_L29=[82579]Stopped Editing.
+D2_L30=[82879]Started Editing.
+D2_L31=[83193]Stopped Editing.
+D2_L32=[83478]Started Editing.
+D2_L33=[84750]Stopped Editing.
+D2_L34=[84750]Project Closed.
+D2_L35=[84789]Project Opened.
+D2_L36=[84815]Started Editing.
+D3=26-07-2023
+D3_L=22
+D3_L1=[132]Stopped Editing.
+D3_L2=[1498]Started Editing.
+D3_L3=[3147]Stopped Editing.
+D3_L4=[3292]Started Editing.
+D3_L5=[3670]Stopped Editing.
+D3_L6=[4085]Started Editing.
+D3_L7=[4164]Stopped Editing.
+D3_E=91
+D3_D=0
+D3_L8=[4164]Project Closed.
+D3_L9=[4520]Project Opened.
+D3_L10=[72896]Project Opened.
+D3_L11=[73103]Started Editing.
+D3_L12=[73417]Stopped Editing.
+D3_L13=[73701]Started Editing.
+D3_L14=[74078]Stopped Editing.
+D3_L15=[74190]Started Editing.
+D3_L16=[74946]Stopped Editing.
+D3_L17=[76984]Project Opened.
+D3_L18=[77007]Started Editing.
+D3_L19=[77826]Stopped Editing.
+D3_L20=[78221]Started Editing.
+D3_L21=[80188]Stopped Editing.
+D3_L22=[80188]Project Closed.
+D4=08-11-2023
+D4_L=2
+D4_L1=[45002]Project Opened.
+D4_L2=[45020]Project Closed.
+
+[Opened Files]
+1=practica_3.c
+t1=75
+Count=1
+2=lcd2.c
+t2=53
+3=..\..\..\..\..\Program Files (x86)\PICC\Drivers\kbd.c
+t3=57
+
+[fileformats]
+forcecoff=0
+[Units]
+Count=1
+1=practica_3 (main)

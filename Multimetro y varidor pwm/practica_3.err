@@ -1,0 +1,7 @@
+Compiling C:\Users\ejtm9\Desktop\LABORATORIO DE DIGITALES 2 VANESSA\Practica 3\practica_3 on 26-jul-23 at 22:15
+>>> Warning 225 "practica_3.c" Line 35(1,1): Interrupt level changed  : NORMAL=>HIGH
+>>> Warning 203 "practica_3.c" Line 53(1,1): Condition always TRUE
+>>> Warning 216 "practica_3.c" Line 94(1,2): Interrupts disabled during call to prevent re-entrancy:  (@delay_ms1)
+      Memory usage:   ROM=9%      RAM=3% - 4%
+      0 Errors,  3 Warnings.
+Build Successful.

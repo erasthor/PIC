@@ -1,0 +1,83 @@
+ÀÄpractica_3
+   ÃÄMAIN  0/420  Ram=9
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄconfigurar_CAD  0/92  Ram=0
+   ³  ³  ÀÄlcd_init  0/158  Ram=6
+   ³  ³     ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ³     ÃÄlcd_send_nibble  0/28  Ram=1
+   ³  ³     ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ³     ÃÄlcd_send_nibble  0/28  Ram=1
+   ³  ³     ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ³     ÀÄlcd_send_byte  0/70  Ram=3
+   ³  ³        ÃÄlcd_read_byte  0/72  Ram=3
+   ³  ³        ³  ÃÄlcd_read_nibble  0/12  Ram=0
+   ³  ³        ³  ÀÄlcd_read_nibble  0/12  Ram=0
+   ³  ³        ÃÄlcd_send_nibble  0/28  Ram=1
+   ³  ³        ÀÄlcd_send_nibble  0/28  Ram=1
+   ³  ÃÄ@goto38197  0/38  Ram=0
+   ³  ÃÄlcd_gotoxy  0/34  Ram=4
+   ³  ³  ÀÄlcd_send_byte  0/70  Ram=3
+   ³  ³     ÀÄ*
+   ³  ÃÄ@PSTRINGC_695  0/34  Ram=2
+   ³  ³  ÀÄlcd_putc  0/92  Ram=1
+   ³  ³     ÃÄlcd_gotoxy  0/34  Ram=4
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÃÄlcd_send_byte  0/70  Ram=3
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ³     ÃÄlcd_gotoxy  0/34  Ram=4
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÃÄlcd_send_byte  0/70  Ram=3
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÀÄlcd_send_byte  0/70  Ram=3
+   ³  ³        ÀÄ*
+   ³  ÃÄlcd_gotoxy  0/34  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄ@ITOF  0/56  Ram=2
+   ³  ÃÄ@MULFF  0/242  Ram=11
+   ³  ÃÄ@DIVFF  0/348  Ram=14
+   ³  ÃÄ@PRINTF_L32D_695FPFPF  0/378  Ram=13
+   ³  ³  ÃÄ@MULFF  0/242  Ram=11
+   ³  ³  ÃÄ@FTOSD  0/64  Ram=5
+   ³  ³  ÃÄ@DIV3232  0/142  Ram=13
+   ³  ³  ÃÄlcd_putc  0/92  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄlcd_putc  0/92  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄlcd_putc  0/92  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄlcd_putc  0/92  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÀÄ@DIV3232  0/142  Ram=13
+   ³  ÃÄlcd_putc  0/92  Ram=1
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_putc  0/92  Ram=1
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_gotoxy  0/34  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGCN_695  0/30  Ram=3
+   ³  ³  ÀÄlcd_putc  0/92  Ram=1
+   ³  ³     ÀÄ*
+   ³  ÃÄ@PRINTF_D_695  0/170  Ram=6
+   ³  ³  ÃÄ@DIV88  0/40  Ram=3
+   ³  ³  ÃÄ@DIV88  0/40  Ram=3
+   ³  ³  ÃÄlcd_putc  0/92  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄlcd_putc  0/92  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄlcd_putc  0/92  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÀÄlcd_putc  0/92  Ram=1
+   ³  ³     ÀÄ*
+   ³  ÃÄlcd_gotoxy  0/34  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGCN_695  0/30  Ram=3
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PRINTF_D_695  0/170  Ram=6
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_putc  0/92  Ram=1
+   ³  ³  ÀÄ*
+   ³  ÀÄlcd_putc  0/92  Ram=1
+   ³     ÀÄ*
+   ÀÄinterrupcion  0/24  Ram=0
+      ÀÄ@delay_ms1  0/40  Ram=1

@@ -1,0 +1,112 @@
+#include <18F4550.h> 
+#device  high_ints= TRUE
+#device adc=10    //indica el numero de bits que vamos a trabajar 
+#FUSES NOWDT, HSPLL, PUT, NOPROTECT, NODEBUG, NOBROWNOUT, NOCPD, NOWRT, HS
+#use delay (clock = 4M)
+#use standard_io(A,B,D)
+#byte portb = 0xf81 // Identificador para el puerto B.
+#include <lcd2.c>
+//#BYTE PORTB = 6
+
+int cont  = 0, Timer2, Poscaler;
+int16 duty = 0;
+
+void configurar_CAD(){
+   
+   lcd_init();   
+   setup_adc(ADC_CLOCK_DIV_32); //Seleccionar TAD=32/Fosc
+   setup_adc_ports(AN0_TO_AN1_ANALOG); //ENTRADA ANALOGICA PIN RA0,RA1
+   SET_TRIS_B(0B11111111);       //Configurar el puerto B
+   ENABLE_INTERRUPTS(GLOBAL);    //Habilita todas las interrupciones
+   ENABLE_INTERRUPTS(INT_EXT);   //Habilita la interrupción externa en el pin RBO
+   
+   // Generemos una Señal cuadrada de 1 Khz
+   Timer2=249;    //Se carga timer 2 con 249 como lo vimos en la pagina
+   //Preescaler=4;  //Preescaler solo puede tomar valores de: 1 - 4 - 16
+   //Para el preescaler colocamos "t2_div_by_4"
+   Poscaler=1;  //Preescaler solo puede tomar valores de: 1
+   setup_timer_2(t2_div_by_4,Timer2,Poscaler);   //Configuracion de Timer 2 para establecer frec. PWM a 1kHz
+   setup_ccp1(ccp_pwm);       //Configurar modulo CCP1 en modo PWM
+   
+}//fin de la configuracion
+
+float convertir (int canal){      //Funcion para la conversion analogica digital
+   set_adc_channel(canal);
+   delay_us(10);
+   return (5.0*read_adc()/1023.0);   
+}//fin de convertir
+
+#INT_EXT      
+void interrupcion(){ //funcion para la interrupcion modo analogo o digital
+   
+   clear_interrupt(INT_EXT); //bajar bandera
+   delay_ms(200);    //Retardo
+   cont++;//Incremente la variable CONT
+   if(cont==6)      //Si la variable CONT es igual a 10
+      cont=0;        //Ponga en cero la variable CONT
+   
+}// Fin de interrupcion 1    
+      
+void velocidad_pwm_analogo(){
+
+   set_adc_channel(0);   
+   delay_us(100);       
+   duty=read_adc(); 
+   set_pwm1_duty(duty);
+
+}//fin de la velocidad pwm
+
+void velocidad_pwm_digital(int valor){
+
+   duty = valor; 
+   set_pwm1_duty(duty);
+
+}//fin de la velocidad pwm
+       
+    
+void main(){
+
+   configurar_CAD();
+   float tension;
+   int velocidad = 0;
+   
+   while(1){
+      
+      tension = convertir(0);    //aqui llamamos la funcion CAD y le mandamos el pin con el que deseamos trabajar
+          
+      if(cont == 0){
+         velocidad_pwm_analogo();      //Trabajando el pwm con el potenciometro
+      }
+      //trabajando el pwm con las interaciones
+      if(cont == 1){
+         velocidad_pwm_digital(6);  //trabajando con el 10%
+         velocidad = 10;
+      }
+      if(cont == 2){
+         velocidad_pwm_digital(16);    //trabajando con el 25%
+         velocidad = 25;
+      }
+      if(cont == 3){
+         velocidad_pwm_digital(32);    //trabajando con el 50%
+         velocidad = 50;
+      }
+      if(cont == 4){
+         velocidad_pwm_digital(48);    //trabajando con el 75%
+         velocidad = 75;
+      }
+      if(cont == 5){
+         velocidad_pwm_digital(57);    //trabajando con el 90%
+         velocidad = 90;
+      }
+     
+    lcd_gotoxy(1,1);
+      printf(lcd_putc,"TENSION");
+      lcd_gotoxy(1,2);
+      printf(lcd_putc,"%f V",tension);
+      lcd_gotoxy(9,1);
+      printf(lcd_putc," N:%i",cont);
+      lcd_gotoxy(9,2);
+      printf(lcd_putc,"SPWM:%i%:",velocidad);
+        
+   }//fin del while
+}//fin del void main
