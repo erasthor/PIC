@@ -1,0 +1,33 @@
+[PROJECT]
+Target=proyecto1.hex
+Processor_Text=PIC18F4550
+CCSVersion=5.076
+Compiler=PCH
+[Target Data]
+FileList=proyecto1.c
+[proyecto1.c]
+Type=4
+[mru-list]
+1=proyecto1.c
+
+[defines]
+buildcount=7
+
+[Opened Files]
+1=proyecto1.c
+t1=37
+Count=1
+[Units]
+Count=1
+1=proyecto1 (main)
+
+[ProjectLog]
+Days=1
+D1=27-08-2023
+D1_L=2
+D1_L1=[39653]Stopped Editing.
+TotalEdit=5
+TotalDebug=0
+D1_E=5
+D1_D=0
+D1_L2=[39653]Project Closed.

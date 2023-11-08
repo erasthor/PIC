@@ -1,0 +1,225 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     @INTERRUPT_AREA
+017     @INTERRUPT_AREA
+018     @INTERRUPT_AREA
+019     @INTERRUPT_AREA
+01A     @INTERRUPT_AREA
+01B     @INTERRUPT_AREA
+01C     @INTERRUPT_AREA
+01D     @INTERRUPT_AREA
+01E     @INTERRUPT_AREA
+01F     @INTERRUPT_AREA
+020     @INTERRUPT_AREA
+021     @INTERRUPT_AREA
+022     @INTERRUPT_AREA
+023     @INTERRUPT_AREA
+024     @INTERRUPT_AREA
+025     @INTERRUPT_AREA
+026     @INTERRUPT_AREA
+027     @INTERRUPT_AREA
+028     @INTERRUPT_AREA
+029     @INTERRUPT_AREA
+02A     @INTERRUPT_AREA
+02B     @INTERRUPT_AREA
+02C     @INTERRUPT_AREA
+02D     @INTERRUPT_AREA
+02E     @INTERRUPT_AREA
+02F-030 @sprintf_string
+031-038 MAIN.temperatura
+039-040 MAIN.por
+041-048 MAIN.ciclo_trabajo
+049     lcd_init.i
+049     MAIN.@SCRATCH1
+04A-04D lcd_init.LCD_INIT_STRING
+04A     MAIN.@SCRATCH2
+04B     MAIN.@SCRATCH3
+04C     MAIN.@SCRATCH4
+04D     MAIN.@SCRATCH5
+04E     @delay_us1.P1
+04E     lcd_init.@SCRATCH1
+04E     MAIN.@SCRATCH6
+05F-066 interrupcion_1.temperatura
+067     interrupcion_1.signo
+068     convertir.pin
+068-06B @FLT.P1
+068-06B @PRINTF_L32D_695FPFPF.P2
+068     interrupcion_1.@SCRATCH1
+069-06A @ITOF.P1
+069     convertir.@SCRATCH1
+069     interrupcion_1.@SCRATCH2
+06A     convertir.@SCRATCH2
+06A     interrupcion_1.@SCRATCH3
+06B     convertir.@SCRATCH3
+06B     interrupcion_1.@SCRATCH4
+06C     @PRINTF_L32D_695FPFPF.P1
+06C-06F @FLT.P2
+06C     convertir.@SCRATCH4
+06C     interrupcion_1.@SCRATCH5
+06D-070 @DIVFF.P1
+06D     interrupcion_1.@SCRATCH6
+06D     @PRINTF_L32D_695FPFPF.@SCRATCH1
+06E-071 @ADDFF.P1
+06E     @PRINTF_L32D_695FPFPF.@SCRATCH2
+06F     @PRINTF_L32D_695FPFPF.@SCRATCH3
+070     @FLT.@SCRATCH1
+070     @PRINTF_L32D_695FPFPF.@SCRATCH4
+071-074 @DIVFF.P1
+071     @FLT.@SCRATCH2
+071     @PRINTF_L32D_695FPFPF.@SCRATCH5
+072-075 @ADDFF.P1
+072     @PRINTF_L32D_695FPFPF.@SCRATCH6
+073     @PRINTF_L32D_695FPFPF.@SCRATCH7
+074     @PRINTF_L32D_695FPFPF.@SCRATCH8
+075-078 @DIV3232.P1
+075-078 @MULFF.P2
+075-078 @FTOSD.P3
+075     @DIVFF.@SCRATCH1
+076     @DIVFF.@SCRATCH2
+076     @ADDFF.@SCRATCH1
+077     @DIVFF.@SCRATCH3
+077     @ADDFF.@SCRATCH2
+078     @DIVFF.@SCRATCH4
+078     @ADDFF.@SCRATCH3
+079-07C @DIV3232.P1
+079-07C @MULFF.P2
+079     @DIVFF.@SCRATCH5
+079     @ADDFF.@SCRATCH4
+079     @FTOSD.@SCRATCH1
+07A     @DIVFF.@SCRATCH6
+07A     @ADDFF.@SCRATCH5
+07B     @ADDFF.@SCRATCH6
+07C     @ADDFF.@SCRATCH7
+07D     @MULFF.@SCRATCH1
+07D     @ADDFF.@SCRATCH8
+07D     @DIV3232.@SCRATCH1
+07E     @MULFF.@SCRATCH2
+07E     @DIV3232.@SCRATCH2
+07F     @MULFF.@SCRATCH3
+07F     @DIV3232.@SCRATCH3
+080     @DIV3232.@SCRATCH4
+081     @DIV3232.@SCRATCH5
+082     interrupcion_2.i
+083     @PSTRINGC_695.@SCRATCH1
+084     @PSTRINGC_695.@SCRATCH2
+085     lcd_putc.c
+086     lcd_gotoxy.x
+086     @delay_ms1.P1
+087     lcd_gotoxy.y
+088     lcd_gotoxy.address
+089     lcd_gotoxy.@SCRATCH1
+08A     lcd_send_byte.address
+08B     lcd_send_byte.n
+08C     lcd_read_byte.low
+08C     lcd_send_byte.@SCRATCH1
+08D     lcd_send_nibble.n
+08D     lcd_read_byte.high
+08E     lcd_read_byte.@SCRATCH1
+F83     lcd
+F83     PSP_DATA
+F8C     lcdlat
+F95     lcdtris
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2
+FBB     CCP_2_LOW
+FBC     CCP_2_HIGH
+FBE     CCP_1_LOW
+FBE     CCP_1
+FBF     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P1
+FE9-FEA @WRITE_PROGRAM_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P3
+FE9-FEA @READ_PACKED_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000164  lcd_read_nibble
+000170  lcd_read_byte
+0001B6  lcd_send_nibble
+0001D4  lcd_send_byte
+00021A  lcd_gotoxy
+00023C  @delay_ms1
+000262  lcd_putc
+0002B2  @FLT
+000328  @ITOF
+00035E  @MULFF
+000450  @DIVFF
+0005AA  convertir
+000634  @ADDFF
+00089E  @FTOSD
+0008DE  @DIV3232
+00096C  @PRINTF_L32D_695FPFPF
+000B1C  interrupcion_1
+000E18  @PSTRINGC_695
+000E3A  interrupcion_2
+000EAE  @const747.call
+000EBA  @const753.call
+000EBC  @const761.call
+000ECA  lcd_init
+000F98  set_up
+000FC2  @delay_us1
+000FE0  @cinit1
+000FE0  MAIN
+000FFA  @cinit2
+
+Project Directory:
+    C:\Users\ejtm9\Desktop\didigtales dos muchachos de tecnologia\Segundo parcial\Proyecto_2edicion\
+
+Project Files:
+    proyecto1.c                                             [27-ago-23 11:00  CRC=0DEC7915]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4550.h [15-ene-18 15:57  CRC=06200171]
+    lcd_modificada.c                                        [25-jul-23 19:43  CRC=D51C54C6]
+
+Source signature=BE452412
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=1133
+
+Units:
+    proyecto1 (main)
+
+Compiler Settings:
+    Processor:      PIC18F4550
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   proyecto1.xsym
+    Errors:      proyecto1.err
+    Ext Symbols: proyecto1.esym
+    INHX32:      proyecto1.hex
+    Symbols:     proyecto1.sym
+    List:        proyecto1.lst
+    Debug/COFF:  proyecto1.cof
+    Project:     proyecto1.ccspjt
+    Call Tree:   proyecto1.tre
+    Statistics:  proyecto1.STA

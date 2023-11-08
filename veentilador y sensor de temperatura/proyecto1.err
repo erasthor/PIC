@@ -1,0 +1,19 @@
+Compiling C:\Users\ejtm9\Desktop\didigtales dos muchachos de tecnologia\Segundo parcial\Proyecto_2edicion\proyecto1 on 27-ago-23 at 11:00
+>>> Warning 230 "proyecto1.c" Line 43(1,1): String truncated
+>>> Warning 230 "proyecto1.c" Line 46(1,1): String truncated
+>>> Warning 230 "proyecto1.c" Line 49(1,1): String truncated
+>>> Warning 203 "proyecto1.c" Line 95(1,1): Condition always TRUE
+>>> Warning 216 "proyecto1.c" Line 128(1,2): Interrupts disabled during call to prevent re-entrancy:  (lcd_putc)
+>>> Warning 216 "proyecto1.c" Line 128(1,2): Interrupts disabled during call to prevent re-entrancy:  (lcd_gotoxy)
+>>> Warning 216 "proyecto1.c" Line 128(1,2): Interrupts disabled during call to prevent re-entrancy:  (@delay_ms1)
+>>> Warning 216 "proyecto1.c" Line 128(1,2): Interrupts disabled during call to prevent re-entrancy:  (lcd_send_nibble)
+>>> Warning 216 "proyecto1.c" Line 128(1,2): Interrupts disabled during call to prevent re-entrancy:  (lcd_send_byte)
+>>> Warning 216 "proyecto1.c" Line 128(1,2): Interrupts disabled during call to prevent re-entrancy:  (@PSTRINGC_695)
+>>> Warning 216 "proyecto1.c" Line 128(1,2): Interrupts disabled during call to prevent re-entrancy:  (convertir)
+>>> Warning 216 "proyecto1.c" Line 128(1,2): Interrupts disabled during call to prevent re-entrancy:  (@MULFF)
+>>> Warning 216 "proyecto1.c" Line 128(1,2): Interrupts disabled during call to prevent re-entrancy:  (@ADDFF)
+>>> Warning 216 "proyecto1.c" Line 128(1,2): Interrupts disabled during call to prevent re-entrancy:  (@FLT)
+>>> Warning 216 "proyecto1.c" Line 128(1,2): Interrupts disabled during call to prevent re-entrancy:  (@DIVFF)
+      Memory usage:   ROM=17%      RAM=4% - 7%
+      0 Errors,  15 Warnings.
+Build Successful.

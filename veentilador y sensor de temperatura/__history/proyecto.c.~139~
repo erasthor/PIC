@@ -1,0 +1,111 @@
+#include <18F4550.h>
+#device  high_ints= TRUE   //activar interacciones 
+#device adc = 10   //indica el numero de bits que vamos a trabajar 
+#FUSES NOWDT, HSPLL, PUT, NOPROTECT, NODEBUG, NOBROWNOUT, NOCPD, NOWRT, HS
+#use delay (clock = 8M)
+#use standard_io(A,B,C,D,E)
+#include <lcd2.c>
+
+void configurar(){
+
+   lcd_init();
+   setup_adc(ADC_CLOCK_DIV_32); //Seleccionar TAD=32/Fosc
+   setup_adc_ports(AN0_TO_AN1_ANALOG); //configuracion de los pines RA0 y RA1 como entradas analogicas
+   SET_TRIS_B(0xFF);       //Configurar el puerto B
+   SET_TRIS_C(0x00);
+   enable_interrupts(int_ext1);
+   enable_interrupts(int_ext2);
+   enable_interrupts(global);//Permitir interrupciones que se han habilitado
+
+}//fin del void configurar
+
+float convertir (int canal){      //Funcion para la conversion analogica digital
+   set_adc_channel(canal);
+   delay_us(10);
+   return (5.0*read_adc()/1023.5);   
+}//fin de convertir
+
+#int_EXT1 
+void press_a(){
+
+   clear_interrupt(INT_EXT1);
+   printf(lcd_putc,"/f");
+   float temperatura_1,temperatura_2;
+  
+   while(temperatura_1<60 || temperatura_2<60){
+     
+      temperatura_1 = (165/1.61)*convertir(0) - 50.0;
+      temperatura_2 = (135.0/2.7)*convertir(1) - 20.0;
+   
+      lcd_gotoxy(2,1);
+      printf(lcd_putc,"T1");
+      lcd_gotoxy(1,2);
+      printf(lcd_putc,"%.2f",temperatura_1);
+      lcd_gotoxy(2,1);
+      printf(lcd_putc,"%.2f",temperatura_1);
+      lcd_gotoxy(10,1);
+      printf(lcd_putc,"T2");
+      
+      if(temperatura_1 > temperatura_2){
+      lcd_gotoxy(8,2);
+      lcd_putc(">");
+      }
+   
+      if(temperatura_1 < temperatura_2){
+         lcd_gotoxy(8,2);
+         lcd_putc("<");
+      }
+      
+      if(temperatura_1 == temperatura_2){
+         lcd_gotoxy(8,2);
+         lcd_putc("=");
+      }
+   
+   }
+   printf(lcd_putc,"/f");
+
+}//fin del press a
+
+#int_EXT2
+void press_b(){
+
+   clear_interrupt(INT_EXT2);
+   printf(lcd_putc,"\f");
+   output_high(PIN_C0);
+   output_high(PIN_C1);
+   lcd_gotoxy(3,1);
+   printf(lcd_putc,"VENTILANDO");
+   for(int i = 0; i<7; i++){
+     lcd_gotoxy(5+i,2);
+     lcd_putc(".");
+     delay_ms(400);//aqui el delay deberia de ir 1000 pero en el proteus se tarda mucho, x eso de deja en 400
+     
+   }//fin del for
+   printf(lcd_putc,"\f");
+   output_low(PIN_C0);
+   output_low(PIN_C1);
+}//fin del press a
+
+void comparar(){
+
+float temperatura_1,temperatura_2;
+   lcd_gotoxy(3,1);
+   printf(lcd_putc,"Control de T");
+   temperatura_1 = (165/1.61)*convertir(0) - 50.0;
+   temperatura_2 = (135.0/2.7)*convertir(1) - 20.0;
+   
+}//fin del void comparar
+
+void main(){
+   
+   configurar();
+   output_low(PIN_C0);
+   output_low(PIN_C1);
+   
+   while(1){
+   
+      comparar();
+   }//fin del while
+
+
+}//fin del void main
