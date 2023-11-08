@@ -1,0 +1,187 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     Data_H
+005     Data_L
+006     D_0
+007     D_1
+008     k
+009     j
+00A     top
+00B-00C salida_digital
+00D-010 memoria
+011-018 tension
+019     i
+01A-01B @sprintf_string
+01C     lcd_init.i
+01C     resultado.i
+01C-01F @SFTOI.P1
+01C     escribir_eeprom.@SCRATCH1
+01C     leer_memoria.@SCRATCH1
+01C     MAIN.@SCRATCH1
+01D-020 lcd_init.LCD_INIT_STRING
+01D     resultado.comparador
+01D     escribir_eeprom.@SCRATCH2
+01D     leer_memoria.@SCRATCH2
+01E-021 @FLT.P1
+01E-01F @MUL1616.P2
+01E     resultado.@SCRATCH1
+01E     @PSTRINGC_695.@SCRATCH1
+01E     escribir_eeprom.@SCRATCH3
+01F-022 @PRINTF_L32D_695FPFPF.P1
+01F     @PSTRINGCN_695.P2
+01F     resultado.@SCRATCH2
+01F     @PSTRINGC_695.@SCRATCH2
+01F     escribir_eeprom.@SCRATCH4
+020-021 @MUL1616.P1
+020     convertir.canal
+020     @PSTRINGCN_695.@SCRATCH1
+021-022 @ITOF.P1
+021     lcd_init.@SCRATCH1
+021     convertir.@SCRATCH1
+021     @PSTRINGCN_695.@SCRATCH2
+022-025 @FLT.P1
+022     convertir.@SCRATCH2
+022     @MUL1616.@SCRATCH1
+023     @PRINTF_L32D_695FPFPF.P1
+023     convertir.@SCRATCH3
+024     convertir.@SCRATCH4
+024     @PRINTF_L32D_695FPFPF.@SCRATCH1
+025-028 @DIVFF.P1
+025     @PRINTF_L32D_695FPFPF.@SCRATCH2
+026     @FLT.@SCRATCH1
+026     @PRINTF_L32D_695FPFPF.@SCRATCH3
+027     @FLT.@SCRATCH2
+027     @PRINTF_L32D_695FPFPF.@SCRATCH4
+028     @PRINTF_L32D_695FPFPF.@SCRATCH5
+029-02C @DIVFF.P1
+029     @PRINTF_L32D_695FPFPF.@SCRATCH6
+02A     @PRINTF_L32D_695FPFPF.@SCRATCH7
+02B     @PRINTF_L32D_695FPFPF.@SCRATCH8
+02C-02F @DIV3232.P1
+02C     lcd_putc.c
+02C-02F @FTOSD.P1
+02C-02F @MULFF.P2
+02D     @delay_ms1.P1
+02D     lcd_gotoxy.x
+02D     @DIVFF.@SCRATCH1
+02E     lcd_gotoxy.y
+02E     @DIVFF.@SCRATCH2
+02F     lcd_gotoxy.address
+02F     @DIVFF.@SCRATCH3
+030-033 @MULFF.P1
+030-033 @DIV3232.P2
+030     lcd_gotoxy.@SCRATCH1
+030     @DIVFF.@SCRATCH4
+030     @FTOSD.@SCRATCH1
+031     lcd_send_byte.address
+031     @DIVFF.@SCRATCH5
+032     lcd_send_byte.n
+032     @DIVFF.@SCRATCH6
+033     lcd_read_byte.low
+033     lcd_send_byte.@SCRATCH1
+034     lcd_send_nibble.n
+034     lcd_read_byte.high
+034     @MULFF.@SCRATCH1
+034     @DIV3232.@SCRATCH1
+035     lcd_read_byte.@SCRATCH1
+035     @MULFF.@SCRATCH2
+035     @DIV3232.@SCRATCH2
+036     @MULFF.@SCRATCH3
+036     @DIV3232.@SCRATCH3
+037     @DIV3232.@SCRATCH4
+038     @DIV3232.@SCRATCH5
+F83     lcd
+F83     PSP_DATA
+F8C     lcdlat
+F95     lcdtris
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2_LOW
+FBB     CCP_2
+FBC     CCP_2_HIGH
+FBE     CCP_1
+FBE     CCP_1_LOW
+FBF     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P1
+FE9-FEA @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P3
+FE9-FEA @READ_PROGRAM_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000004  comparaciones.call
+000014  comparaciones.data
+000018  @const738.call
+000022  @const748.call
+000036  @const771.call
+000040  @const773.call
+000048  @delay_ms1
+000070  lcd_send_nibble
+000088  lcd_read_nibble
+000094  lcd_read_byte
+0000D2  lcd_send_byte
+00010C  lcd_init
+000180  configurar_CAD
+00019E  lcd_gotoxy
+0001C0  lcd_putc
+000210  @PSTRINGC_695
+000230  @FLT
+0002A6  @MULFF
+000398  @DIVFF
+0004F2  @SFTOI
+00052A  escribir_eeprom
+0006A6  @MUL1616
+0006C6  @ITOF
+0006FC  @FTOSD
+00073C  @DIV3232
+0007CA  @PRINTF_L32D_695FPFPF
+000942  leer_memoria
+000A1A  convertir
+000A9A  @PSTRINGCN_695
+000ABA  resultado
+000C0E  MAIN
+000C0E  @cinit1
+000C22  @cinit2
+
+Project Directory:
+    G:\Mi unidad\Universidad\8 SEMESTRE (PRE-PROMO)\Lab de digitales2\multimetro final\
+
+Project Files:
+    voltimetro JA.c                                         [15-jun-23 00:18  CRC=5A5793B2]
+    C:\Program Files (x86)\PICC\Devices\18F4550.h           [15-ene-18 15:57  CRC=06200171]
+    C:\Program Files (x86)\PICC\Drivers\lcd.c               [22-feb-16 09:05  CRC=D1A6378A]
+
+Source signature=03C40437
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=58F3
+
+Units:
+    voltimetro JA (main)
+
+Compiler Settings:
+    Processor:      PIC18F4550
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   voltimetro JA.xsym
+    Errors:      voltimetro JA.err
+    Ext Symbols: voltimetro JA.esym
+    INHX32:      voltimetro JA.hex
+    Symbols:     voltimetro JA.sym
+    List:        voltimetro JA.lst
+    Debug/COFF:  voltimetro JA.cof
+    Project:     voltimetro JA.ccspjt
+    Call Tree:   voltimetro JA.tre
+    Statistics:  voltimetro JA.STA

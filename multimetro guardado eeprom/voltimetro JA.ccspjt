@@ -1,0 +1,135 @@
+[PROJECT]
+Target=voltimetro JA.hex
+Processor_Text=PIC18F4550
+CCSVersion=5.076
+Compiler=PCH
+[Target Data]
+FileList=voltimetro JA.c
+[voltimetro JA.c]
+Type=4
+[mru-list]
+1=voltimetro JA.c
+
+[defines]
+buildcount=119
+
+[ProjectLog]
+Days=11
+D1=08-02-2023
+D1_L=15
+D1_L1=[61346]Started Editing.
+D1_L2=[62256]Stopped Editing.
+D1_L3=[62876]Project Opened.
+D1_L4=[62983]Started Editing.
+D1_L5=[63283]Stopped Editing.
+D1_L6=[63327]Started Editing.
+D1_L7=[64179]Stopped Editing.
+D1_L8=[64523]Started Editing.
+D1_L9=[64824]Stopped Editing.
+D1_L10=[66843]Started Editing.
+D1_L11=[67179]Stopped Editing.
+D1_L12=[68090]Started Editing.
+D1_L13=[69838]Stopped Editing.
+D1_L14=[70821]Started Editing.
+D1_L15=[71864]Stopped Editing.
+TotalEdit=146
+TotalDebug=0
+D2=09-02-2023
+D2_E=61
+D2_D=0
+D2_L=9
+D2_L1=[34386]Project Closed.
+D2_L2=[43666]Project Opened.
+D2_L3=[43748]Started Editing.
+D2_L4=[44881]Stopped Editing.
+D2_L5=[70156]Started Editing.
+D2_L6=[70456]Stopped Editing.
+D2_L7=[71424]Started Editing.
+D2_L8=[71726]Stopped Editing.
+D2_L9=[83930]Project Closed.
+D3=10-02-2023
+D3_L=11
+D3_L1=[28476]Project Opened.
+D3_L2=[29196]Started Editing.
+D3_L3=[30153]Stopped Editing.
+D3_L4=[30470]Started Editing.
+D3_L5=[31946]Stopped Editing.
+D3_L6=[32065]Started Editing.
+D3_L7=[33114]Stopped Editing.
+D3_L8=[33587]Started Editing.
+D3_L9=[34139]Stopped Editing.
+D3_L10=[34864]Started Editing.
+D3_L11=[35185]Stopped Editing.
+D4=15-02-2023
+D4_L=11
+D4_L1=[74005]Project Opened.
+D4_L2=[74260]Started Editing.
+D4_L3=[74699]Stopped Editing.
+D4_L4=[74721]Started Editing.
+D4_L5=[75900]Stopped Editing.
+D4_L6=[76712]Started Editing.
+D4_L7=[77414]Stopped Editing.
+D4_L8=[77710]Started Editing.
+D4_L9=[78010]Stopped Editing.
+D4_L10=[79568]Started Editing.
+D4_L11=[80190]Stopped Editing.
+D5=16-02-2023
+D5_L=8
+D5_L1=[20914]Started Editing.
+D5_L2=[21721]Stopped Editing.
+D5_E=69
+D5_D=0
+D5_L3=[21721]Project Closed.
+D5_L4=[21853]Project Opened.
+D5_L5=[21999]Started Editing.
+D5_L6=[23519]Stopped Editing.
+D5_L7=[23519]Project Closed.
+D5_L8=[35901]Project Opened.
+D6=17-02-2023
+D6_L=1
+D6_L1=[49034]Project Closed.
+D7=23-02-2023
+D7_L=1
+D7_L1=[58110]Project Opened.
+D8=03-03-2023
+D8_L=2
+D8_L1=[68895]Project Opened.
+D8_L2=[71179]Project Closed.
+D9=08-04-2023
+D9_L=4
+D9_L1=[39197]Project Opened.
+D9_L2=[39261]Started Editing.
+D9_L3=[39931]Stopped Editing.
+D9_E=7
+D9_D=0
+D9_L4=[39963]Project Closed.
+D10=15-06-2023
+D10_L=5
+D10_L1=[1081]Project Opened.
+D10_L2=[1096]Started Editing.
+D10_L3=[1114]Stopped Editing.
+D10_E=1
+D10_D=0
+D10_L4=[1114]Project Closed.
+D10_L5=[6623]Project Opened.
+D11=23-07-2023
+D11_L=6
+D11_L1=[32399]Project Opened.
+D11_L2=[32418]Project Closed.
+D11_L3=[32454]Project Opened.
+D11_L4=[32505]Started Editing.
+D11_L5=[32953]Stopped Editing.
+D11_E=8
+D11_D=0
+D11_L6=[32953]Project Closed.
+
+[Opened Files]
+1=C:\Users\ejtm9\Desktop\LABORATORIO DE DIGITALES 2 VANESSA\Practica 3\practica_3.c
+t1=13
+Count=1
+
+[fileformats]
+forcecoff=0
+[Units]
+Count=1
+1=voltimetro JA (main)

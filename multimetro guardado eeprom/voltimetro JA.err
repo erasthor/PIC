@@ -1,0 +1,5 @@
+Compiling G:\Mi unidad\Universidad\8 SEMESTRE (PRE-PROMO)\Lab de digitales2\multimetro final\voltimetro JA on 23-jul-23 at 09:09
+>>> Warning 203 "voltimetro JA.c" Line 85(1,1): Condition always TRUE
+      Memory usage:   ROM=10%      RAM=1% - 3%
+      0 Errors,  1 Warnings.
+Build Successful.
