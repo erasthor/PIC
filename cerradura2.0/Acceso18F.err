@@ -1,0 +1,11 @@
+Compiling C:\Users\ejtm9\Desktop\Cerrasura Electronica\cerradura2.0\Acceso18F on 16-jul-23 at 19:06
+*** Error 18 "Acceso18F.c" Line 5(10,21): File can not be opened
+    Not in source "teclado.c"
+    Not in local "teclado.c"
+    Not in project "C:\Users\ejtm9\Desktop\Cerrasura Electronica\cerradura kaio\Practica\Practica\Practica_1\teclado.c"
+    Not in "C:\Program Files (x86)\PICC\Devices\teclado.c"
+    Not in "C:\Program Files (x86)\PICC\Drivers\teclado.c"
+*** Error 12 "Acceso18F.c" Line 19(12,13): Undefined identifier  -- kbd_init
+*** Error 12 "Acceso18F.c" Line 26(19,20): Undefined identifier  -- kbd_getc
+      3 Errors,  0 Warnings.
+Build Failed.
