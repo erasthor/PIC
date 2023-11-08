@@ -1,0 +1,97 @@
+CCS PCH C Compiler, Version 5.076, 56587               08-feb-23 16:45
+
+               Filename:   C:\Users\ejtm9\Desktop\guardando eeprom\guardado2.lst
+
+               ROM used:   82 bytes (0%)
+                           Largest free fragment is 32686
+               RAM used:   106 (5%) at main() level
+                           106 (5%) worst case
+               Stack used: 0 locations
+               Stack size: 31
+
+*
+0000:  GOTO   0004
+.................... #include <18F4550.h> 
+.................... //////////// Standard Header file for the PIC18F4550 device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2014 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC18F4550 
+....................  
+.................... #list 
+....................  
+.................... //#include <lcd.c> 
+.................... #device adc=10 
+.................... #FUSES NOWDT, HSPLL, PUT, NOPROTECT, NODEBUG, NOBROWNOUT, NOCPD, NOWRT, HS 
+.................... #use delay (clock=4M, crystal=4M) 
+.................... #use standard_io(A,B,D) 
+....................  
+....................  
+....................  
+.................... void main(){ 
+0004:  CLRF   FF8
+0006:  BCF    FD0.7
+0008:  MOVF   FC1,W
+000A:  ANDLW  C0
+000C:  IORLW  0F
+000E:  MOVWF  FC1
+0010:  MOVLW  07
+0012:  MOVWF  FB4
+0014:  CLRF   x69
+....................  
+.................... int numero[100], n=0; 
+.................... //lcd_init(); 
+....................  
+....................    while(True){ 
+....................     
+....................      for(int number = 0; number<256; number ++ ){ 
+0016:  CLRF   x6A
+....................       
+....................      write_eeprom(number, numero[2]); 
+0018:  MOVF   FF2,W
+001A:  MOVWF  00
+001C:  BCF    FF2.7
+001E:  MOVFF  6A,FA9
+0022:  MOVFF  07,FA8
+0026:  BCF    FA6.6
+0028:  BCF    FA6.7
+002A:  BSF    FA6.2
+002C:  MOVLB  F
+002E:  MOVLW  55
+0030:  MOVWF  FA7
+0032:  MOVLW  AA
+0034:  MOVWF  FA7
+0036:  BSF    FA6.1
+0038:  BTFSC  FA6.1
+003A:  GOTO   0038
+003E:  BCF    FA6.2
+0040:  MOVF   00,W
+0042:  IORWF  FF2,F
+0044:  MOVLB  0
+0046:  INCF   x6A,F
+0048:  GOTO   0018
+....................       
+....................     }//fin del for 
+004C:  GOTO   0016
+....................     
+....................     
+....................    }//fin del while 
+....................     
+.................... }//fin del void main 
+*
+0050:  SLEEP 
+
+Configuration Fuses:
+   Word  1: C000   PLL1 CPUDIV1 NOUSBDIV XT FCMEN IESO
+   Word  2: 1E38   PUT NOBROWNOUT BORV21 VREGEN NOWDT WDT32768
+   Word  3: 8700   CCP2C1 PBADEN LPT1OSC MCLR
+   Word  4: 00A1   STVREN NOLVP ICSP2 NOXINST NODEBUG
+   Word  5: C00F   NOPROTECT NOCPB NOCPD
+   Word  6: E00F   NOWRT NOWRTC NOWRTB NOWRTD
+   Word  7: 400F   NOEBTR NOEBTRB

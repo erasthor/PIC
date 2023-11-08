@@ -1,0 +1,6 @@
+Compiling C:\Users\ejtm9\Desktop\guardando eeprom\guardado2 on 08-feb-23 at 16:45
+>>> Warning 203 "guardado2.c" Line 17(1,1): Condition always TRUE
+>>> Warning 202 "guardado2.c" Line 12(18,19): Variable never used:   n
+      Memory usage:   ROM=0%      RAM=5% - 5%
+      0 Errors,  2 Warnings.
+Build Successful.

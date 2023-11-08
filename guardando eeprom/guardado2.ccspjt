@@ -1,0 +1,39 @@
+[PROJECT]
+Target=guardado2.hex
+Processor_Text=PIC18F4550
+CCSVersion=5.076
+Compiler=PCH
+[Target Data]
+FileList=guardado2.c
+[guardado2.c]
+Type=4
+[mru-list]
+1=guardado2.c
+
+[defines]
+buildcount=2
+
+[ProjectLog]
+Days=1
+D1=08-02-2023
+D1_L=6
+D1_L1=[58844]Stopped Editing.
+D1_L2=[59566]Started Editing.
+D1_L3=[59891]Stopped Editing.
+D1_L4=[59931]Started Editing.
+D1_L5=[60626]Stopped Editing.
+TotalEdit=7
+TotalDebug=0
+D1_E=7
+D1_D=0
+D1_L6=[61193]Project Closed.
+
+[Opened Files]
+1=guardado2.c
+t1=1
+2=..\8 SEMESTRE (PRE-PROMO)\Lab de digitales2\practica3 multimetro\multimetrodc.c
+t2=9
+Count=2
+[Units]
+Count=1
+1=guardado2 (main)

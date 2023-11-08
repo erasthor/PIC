@@ -1,0 +1,66 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+005-068 main.numero
+069     main.n
+06A     main.number
+F83     PSP_DATA
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2
+FBB     CCP_2_LOW
+FBC     CCP_2_HIGH
+FBE     CCP_1
+FBE     CCP_1_LOW
+FBF     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P1
+FE9-FEA @READ_PROGRAM_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P3
+FE9-FEA @WRITE_PROGRAM_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000004  main
+000004  @cinit1
+000014  @cinit2
+
+Project Directory:
+    C:\Users\ejtm9\Desktop\guardando eeprom\
+
+Project Files:
+    guardado2.c                                             [08-feb-23 16:45  CRC=E4561959]
+    ..\..\..\..\Program Files (x86)\PICC\Devices\18F4550.h  [15-ene-18 15:57  CRC=06200171]
+
+Source signature=F0961C3B
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=08A9
+
+Units:
+    guardado2 (main)
+
+Compiler Settings:
+    Processor:      PIC18F4550
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   guardado2.xsym
+    Errors:      guardado2.err
+    Ext Symbols: guardado2.esym
+    INHX32:      guardado2.hex
+    Symbols:     guardado2.sym
+    List:        guardado2.lst
+    Debug/COFF:  guardado2.cof
+    Project:     guardado2.ccspjt
+    Call Tree:   guardado2.tre
+    Statistics:  guardado2.STA

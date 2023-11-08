@@ -1,0 +1,44 @@
+
+ROM used:   82/32768 (0%)
+            82/32768 (0%) including unused fragments
+
+            0.1 Average locations per line
+            16.4 Average locations per statement
+
+RAM used:   106/2048 (5%) at main() level
+            106/2048 (5%) worst case
+
+Stack used: 0 worst case (0 in main + 0 for interrupts)
+Stack size: 31
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   27     5 100  guardado2.c
+  852     0   0  ..\..\..\..\Program Files (x86)\PICC\Devices\18F4550.h
+----- -----
+  879     5 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     78  48  102    176  4.7  main
+ Inline         0    460  4.7  @cinit1
+
+Program metrics:
+    Functions               2
+    Statements              5
+    Comments                159
+    Volume (V)              744
+    Difficulty (D)          9.7
+    Effort to implement (E) 7187
+    Time to implement (T)   7 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   1
+    Maintainability (MI)    173
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00002     4  0  
+00004-07FFE    78  32686  
+
+
+
